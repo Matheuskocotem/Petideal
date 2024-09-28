@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -18,7 +19,7 @@ class AuthController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([    
-           'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users',
             'password' => 'required|string|min:8|confirmed',
             'cpf' => 'required|string|size:11',
@@ -46,7 +47,30 @@ class AuthController extends Controller
         return response()->json(['message' => 'Usuário criado com sucesso.', 'user' => $user], 201);
     }
 
-    public function update(request $request, User $user)
+    public function login(Request $request)
+    {
+        $validatedData = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|string',
+        ]);
+
+        if (Auth::attempt($validatedData)) {
+            $user = Auth::user();
+            $token = $user->createToken('API Token')->plainTextToken;
+
+            return response()->json(['message' => 'Login bem-sucedido.', 'user' => $user, 'token' => $token]);
+        }
+
+        return response()->json(['message' => 'Credenciais inválidas.'], 401);
+    }
+
+    public function logout(Request $request)
+    {
+        $request->user()->currentAccessToken()->delete();
+        return response()->json(['message' => 'Logout bem-sucedido.']);
+    }
+
+    public function update(Request $request, User $user)
     {
         $validatedData = $request->validate([
             'name' => 'sometimes|required|string|max:255',
