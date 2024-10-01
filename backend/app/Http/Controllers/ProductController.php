@@ -30,7 +30,7 @@ class ProductController extends Controller
         return $query->get();
     }
 
-    public funtion store(Request $request)
+    public function store(Request $request)
     {
         $validated = $request->validate([
             'name' => 'required',
@@ -38,7 +38,7 @@ class ProductController extends Controller
             'stock' => 'required|integer',
             'categoryId' => 'required|exists:categories,id',
         ]);
-
+    
         return Product::create($validated);
     }
 
@@ -72,10 +72,10 @@ class ProductController extends Controller
     }
     
 
-    public funtion destroy(Product $product)
+    public function destroy(Product $product)
     {
         $product->delete();
-
+    
         return response()->json([
             'message' => 'Produto deletado com sucesso'
         ]);
