@@ -7,7 +7,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
+      component: () => import('../views/Home.vue'),
       meta: {
         title: 'Home'
       }
@@ -35,7 +35,7 @@ const router = createRouter({
       meta: {
         title: 'login'
       }
-    }
+    },
   ]
 })
 
