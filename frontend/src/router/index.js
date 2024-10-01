@@ -36,8 +36,6 @@ const router = createRouter({
         title: 'login'
       }
     },
-<<<<<<< HEAD
-=======
     {
       path: '/dashboard',
       name: 'dashboard',
@@ -46,7 +44,6 @@ const router = createRouter({
         title: 'Home'
       }
     }
->>>>>>> d3cedeb853ca7f7f3a9be47e64efb3c5228ed967
   ]
 })
 
