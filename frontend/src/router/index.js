@@ -43,6 +43,14 @@ const router = createRouter({
       meta: {
         title: 'Home'
       }
+    },
+    {
+      path: '/shop',
+      name: 'Shop',
+      component: () => import('../views/PetShop.vue'),
+      meta: {
+        title: 'Home'
+      }
     }
   ]
 })
