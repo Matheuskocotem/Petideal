@@ -3,9 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
+use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+
+    public function __construct()
+    {
+        
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         return Product::with('category')->get();
@@ -32,6 +41,11 @@ class ProductController extends Controller
 
     public funtion store(Request $request)
     {
+
+        if (auth()->user()->role !== 'admin') {
+            return response()->json(['message' => 'Acesso negado. Apenas administradores podem criar produtos.'], 403);
+        }
+
         $validated = $request->validate([
             'name' => 'required',
             'price' => 'required|numeric',
@@ -56,6 +70,10 @@ class ProductController extends Controller
 
     public function update(Request $request, Product $product)
     {
+        if (auth()->user()->role !== 'admin') {
+            return response()->json(['message' => 'Acesso negado. Apenas administradores podem atualizar produtos.'], 403);
+        }
+
         $validated = $request->validate([
             'name' => 'required',
             'price' => 'required|numeric',
@@ -74,6 +92,11 @@ class ProductController extends Controller
 
     public funtion destroy(Product $product)
     {
+
+        if (auth()->user()->role !== 'admin') {
+            return response()->json(['message' => 'Acesso negado. Apenas administradores podem deletar produtos.'], 403);
+        }
+        
         $product->delete();
 
         return response()->json([

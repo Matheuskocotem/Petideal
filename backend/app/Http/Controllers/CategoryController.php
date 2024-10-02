@@ -3,9 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Category;
 
 class CategoryController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         return Category::all();
@@ -28,6 +35,10 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
+        if (auth()->user()->role !== 'admin') {
+            return response()->json(['message' => 'Acesso negado. Apenas administradores podem criar categorias.'], 403);
+        }
+
         $validated = $request->validate([
             'name' => 'required'
         ]);
@@ -41,6 +52,10 @@ class CategoryController extends Controller
 
     public function update(Request $request, Category $category)
     {
+        if (auth()->user()->role !== 'admin') {
+            return response()->json(['message' => 'Acesso negado. Apenas administradores podem atualizar categorias.'], 403);
+        }
+
         $validated = $request->validate([
             'name' => 'required'
         ]);
@@ -53,11 +68,17 @@ class CategoryController extends Controller
         ], 200);
     }
     
-    public funtion destroy()
+    public function destroy(Category $category)
     {
+        if (auth()->user()->role !== 'admin') {
+            return response()->json(['message' => 'Acesso negado. Apenas administradores podem deletar categorias.'], 403);
+        }
+    
         $category->delete();
         
         return response()->json([
-            'message' => 'Categoria deletada com sucesso']);
+            'message' => 'Categoria deletada com sucesso'
+        ]);
     }
+    
 }

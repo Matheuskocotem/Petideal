@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
+
+    
     public function index()
     {
         $users = User::all();
@@ -99,6 +101,6 @@ class AuthController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
-        return response()->json(['message' => 'Usuário deletado com sucesso.']);
+        return response()->json(['message' => 'Usuário deletado com sucesso.'], 201);
     }
 }
