@@ -17,7 +17,7 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::post('/login', [AuthController::class, 'login']);
+Route::get('/login', [AuthController::class, 'login']);
 Route::post('/users', [AuthController::class, 'store']);
 
 Route::middleware('auth:sanctum')->group(function () {
