@@ -61,29 +61,34 @@ export default {
   }
   
   .contact-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 24px;
-  }
-  
-  .contact-item {
-    display: flex;
-    align-items: center;
-  }
-  
-  .contact-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-  }
-  
-  .contact-icon.location {
-    align-self: flex-start;
-  }
-  
-  .contact-text {
-    font-size: 16px;
-    font-weight: 500;
+  display: flex;
+  min-width: 240px;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.contact-text {
+  align-self: stretch;
+  margin: auto 0;
+}
+
+  .contact-item:nth-child(2) .contact-text {
+    white-space: normal;
   }
   
   .main-nav {
@@ -197,16 +202,18 @@ export default {
     white-space: nowrap;
     border: 0;
   }
+
+  
   
   @media (max-width: 991px) {
   .pet-shop-header {
-    padding: 24px 0; /* Remove o padding lateral */
+    padding: 24px 0;
   }
 
   .main-nav {
     flex-wrap: wrap;
     padding: 20px;
-    max-width: 100%; /* Ocupa a largura total da tela em dispositivos menores */
+    max-width: 100%; 
   }
 
   .nav-links {
