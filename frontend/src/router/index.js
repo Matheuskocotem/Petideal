@@ -41,7 +41,7 @@ const router = createRouter({
       name: 'dashboard',
       component: () => import('../views/Dashboard.vue'),
       meta: {
-        title: 'Home'
+        title: 'Dashboard'
       }
     },
     {
@@ -49,9 +49,17 @@ const router = createRouter({
       name: 'Shop',
       component: () => import('../views/PetShop.vue'),
       meta: {
+        title: 'Shop'
+      }
+    },
+    {
+      path: '/homepage',
+      name: 'homepage',
+      component: () => import('../views/PetShopHome.vue'),
+      meta: {
         title: 'Home'
       }
-    }
+    },
   ]
 })
 
