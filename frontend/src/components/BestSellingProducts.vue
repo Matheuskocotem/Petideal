@@ -38,51 +38,49 @@
   </script>
   
   <style scoped>
-  .best-selling-products {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    overflow: hidden;
-    justify-content: start;
-    padding: 60px 72px;
-  }
+.best-selling-products {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: start;
+  padding: 60px 72px;
+}
   @media (max-width: 991px) {
     .best-selling-products {
       max-width: 100%;
       padding: 0 20px;
     }
   }
+  
   .best-selling-products-2 {
     color: rgba(0, 0, 0, 1);
     align-self: center;
     font: 600 40px/0.5 Inter, sans-serif;
   }
-  .cards-3 {
-    display: flex;
-    margin-top: 60px;
-    width: 100%;
-    align-items: start;
-    gap: 24px;
-    justify-content: start;
-    flex-wrap: wrap;
-  }
-  @media (max-width: 991px) {
-    .cards-3 {
-      max-width: 100%;
-      margin-top: 40px;
-    }
-  }
+  
   .card-5 {
-    border-radius: 20px;
-    border: 1px solid var(--Gray-100, #f8f9fa);
-    display: flex;
-    min-width: 240px;
-    flex-direction: column;
-    overflow: hidden;
-    justify-content: start;
-    flex-grow: 1;
-    width: 245px;
-  }
+  border-radius: 20px;
+  border: 1px solid var(--Gray-100, #f8f9fa);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: start;
+  flex-grow: 1;
+  flex-basis: calc(25% - 16px);
+  max-width: calc(25% - 16px); 
+  padding: 20px; 
+}
+
+.cards-3 {
+  display: flex; 
+  margin-top: 60px;
+  width: 100%;
+  align-items: start;
+  gap: 16px; 
+  justify-content: start; 
+  flex-wrap: wrap; 
+}
   .product-image {
     aspect-ratio: 1;
     object-fit: contain;

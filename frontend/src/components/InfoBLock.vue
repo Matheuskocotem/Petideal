@@ -1,137 +1,117 @@
 <template>
-    <section class="info-block">
-      <div class="text-button-2">
-        <div class="text-12">
-          <div class="text-13">
-            <div class="pet-shop-3">Pet shop</div>
-            <h2 class="the-smarter-way-to-shop-for-your-pet">
-              The smarter way to shop <br />for your pet
-            </h2>
-          </div>
-          <p class="lorem-ipsum-dolor-sit-amet-consectetur-at-et-vehicula-sodales-est-proin-turpis-pellentesque-sinulla-a-aliquam-amet-rhoncus-quisque-eget-sit">
-            Lorem ipsum dolor sit amet consectetur. At et vehicula sodales est proin turpis pellentesque sinulla a aliquam amet rhoncus quisque eget sit
-          </p>
+  <div class="info-block">
+    <div class="text-button">
+      <div class="text">
+        <div class="div">
+          <div class="pet-shop">Pet Ideal</div>
+          <h2 class="the-smarter-way-to">
+            The smarter way to shop <br />for your pet
+          </h2>
         </div>
-        <button class="button-2">Learn More</button>
+        <p class="text-wrapper">
+          Lorem ipsum dolor sit amet consectetur. At et vehicula sodales est proin turpis pellentesque sinulla a aliquam amet rhoncus quisque eget sit
+        </p>
       </div>
-      <img loading="lazy" src="http://b.io/ext_78-" class="img-27" alt="Pet shop illustration" />
-    </section>
-  </template>
-  
-  <style scoped>
-  .info-block {
-    background-color: rgba(248, 249, 250, 1);
-    position: relative;
-    display: flex;
-    width: 100%;
-    align-items: flex-start;
-    overflow: hidden;
-    font-family: Poppins, sans-serif;
-    justify-content: end;
-    padding: 120px 72px;
-  }
-  @media (max-width: 991px) {
-    .info-block {
-      max-width: 100%;
-      padding: 100px 20px;
-    }
-  }
-  .text-button-2 {
-    z-index: 0;
-    display: flex;
-    min-width: 240px;
-    flex-direction: column;
-    justify-content: start;
-    width: 587px;
-    margin: auto 0;
-  }
-  @media (max-width: 991px) {
-    .text-button-2 {
-      max-width: 100%;
-    }
-  }
-  .text-12 {
-    display: flex;
-    max-width: 100%;
-    width: 587px;
-    flex-direction: column;
-    justify-content: start;
-  }
-  .text-13 {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    font-weight: 700;
-    justify-content: start;
-  }
-  .pet-shop-3 {
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    color: var(--Orange-500, #fd7e14);
-    text-overflow: ellipsis;
-    font-size: 16px;
-    text-transform: capitalize;
-  }
-  .the-smarter-way-to-shop-for-your-pet {
-    color: rgba(0, 0, 0, 1);
-    font-size: 40px;
-    margin-top: 20px;
-  }
-  @media (max-width: 991px) {
-    .the-smarter-way-to-shop-for-your-pet {
-      max-width: 100%;
-    }
-  }
-  .lorem-ipsum-dolor-sit-amet-consectetur-at-et-vehicula-sodales-est-proin-turpis-pellentesque-sinulla-a-aliquam-amet-rhoncus-quisque-eget-sit {
-    color: rgba(0, 0, 0, 0.8);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-    margin-top: 40px;
-  }
-  @media (max-width: 991px) {
-    .lorem-ipsum-dolor-sit-amet-consectetur-at-et-vehicula-sodales-est-proin-turpis-pellentesque-sinulla-a-aliquam-amet-rhoncus-quisque-eget-sit {
-      max-width: 100%;
-    }
-  }
-  .button-2 {
-    leading-trim: both;
-    text-edge: cap;
-    align-self: start;
-    border-radius: 12px;
-    background: var(--Default-Black, #000);
-    background-color: var(--Default-Black, #000);
-    margin-top: 60px;
-    min-height: 60px;
-    gap: 10px;
-    overflow: hidden;
-    font-size: 20px;
-    color: var(--Default-White, #fff);
-    font-weight: 600;
-    padding: 23px 40px;
-  }
-  @media (max-width: 991px) {
-    .button-2 {
-      margin-top: 40px;
-      padding: 0 20px;
-    }
-  }
-  .img-27 {
-    aspect-ratio: 1.36;
-    object-fit: contain;
-    object-position: center;
-    width: 799px;
-    align-self: start;
-    position: absolute;
-    z-index: 0;
-    min-width: 240px;
-    left: -41px;
-    top: 0px;
-    height: 590px;
-  }
-  @media (max-width: 991px) {
-    .img-27 {
-      max-width: 100%;
-    }
-  }
-  </style>
+      <button class="button">
+        Learn More
+      </button>
+    </div>
+    <div>
+      <img loading="lazy" src="../Img/dogdeitadinho.png" class="image" alt="Pet shop illustration" />
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "InfoBlock",
+  data() {
+    return {
+      // image1: require("../Img/image.png"),
+    };
+  },
+};
+</script>
+
+<style scoped>
+.info-block {
+  background-color: rgba(248, 249, 250, 1);
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  overflow: hidden;
+  font-family: Poppins, sans-serif;
+  justify-content: flex-start;
+  padding: 120px 72px;
+}
+
+.info-block .text-button {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-left: 10px;
+  position: relative;
+  width: 696px;
+}
+
+.info-block .text {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+}
+
+.info-block .div {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.info-block .pet-shop {
+  color: var(--orange-500);
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.info-block .the-smarter-way-to {
+  color: #000000;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 40px;
+  font-weight: 700;
+  width: 587px;
+}
+
+.info-block .text-wrapper {
+  color: #000000cc;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.6px;
+  width: 479px;
+}
+
+.info-block .button {
+  all: unset;
+  align-items: center;
+  background-color: var(black);
+  border-radius: 12px;
+  display: inline-flex;
+  justify-content: center;
+  padding: 17px 40px;
+  height: 60px;
+}
+
+.info-block .image {
+  height: 539px;
+  object-fit: cover;
+  width: 737px; /* Corrigido */
+  margin-left: 300px; 
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
     <section class="featured-products">
-      <h2 class="featured-products-2">Featured products</h2>
+      <h2 class="featured-products-2">Produtos em destaque</h2>
       <div class="cards-2">
         <div v-for="(product, index) in featuredProducts" :key="index" class="card-2">
           <img :src="product.image" :alt="product.name" class="product-image" />
@@ -23,9 +23,9 @@
     data() {
       return {
         featuredProducts: [
-          { name: 'Premium Dog Food', price: 19.99, image: 'http://b.io/ext_75-' },
-          { name: 'Premium Cat Food', price: 19.99, image: 'http://b.io/ext_76-' },
-          { name: 'Premium Dog Food', price: 19.99, image: 'http://b.io/ext_77-' },
+          { name: '', price: 19.99, image: '../Img/feature_product-1.webp' },
+          { name: '', price: 19.99, image: '../Img/feature_product-2.webp' },
+          { name: '', price: 19.99, image: '../Img/feature_product-3.webp' },
         ],
       };
     },

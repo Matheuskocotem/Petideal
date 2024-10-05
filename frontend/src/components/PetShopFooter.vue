@@ -1,308 +1,204 @@
 <template>
-    <footer class="footer">
-      <img loading="lazy" src="http://b.io/ext_96-" class="img-60" alt="Footer decoration" />
-      <div class="icons-text-2">
-        <div class="logo-text-icons">
-          <div class="logo-2">
-            <img loading="lazy" src="http://b.io/ext_97-" class="img-61" alt="Pet Shop logo" />
-            <div class="pet-shop">Pet Shop</div>
-          </div>
-          <p class="sed-viverra-eget-fames-sit-varius-pellentesque-mattis-libero-viverra-dictumst-ornaresed-justo-convallis-vitae">
-            Sed viverra eget fames sit varius. Pellentesque mattis libero viverra dictumst ornaresed justo convallis vitae
-          </p>
-          <div class="social-icons">
-            <img v-for="(icon, index) in socialIcons" :key="index" loading="lazy" :src="icon" class="img" :alt="`Social icon ${index + 1}`" />
-          </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="company-info">
+        <div class="logo">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/45b83347f408061aeae396380f2b2a2136727a94a40263737976a96f344c9732?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" class="logo-image" alt="Pet Shop Logo" />
+          <h2 class="company-name">Pet Shop</h2>
         </div>
-        <div class="text-26">
-          <div class="company">Company</div>
-          <div class="text-27">
-            <div>About Us</div>
-            <div class="blog">Blog</div>
-            <div class="gift-cards">Gift cards</div>
-            <div class="careers">Careers</div>
-          </div>
-        </div>
-        <div class="text-28">
-          <div class="useful-links">Useful Links</div>
-          <div class="text-29">
-            <div>New products</div>
-            <div class="best-sellers">Best sellers</div>
-            <div class="discount">Discount</div>
-            <div class="f-a-q">F.A.Q</div>
-          </div>
-        </div>
-        <div class="text-30">
-          <div class="customer-service">Customer Service</div>
-          <div class="text-31">
-            <div>Contact Us</div>
-            <div class="shipping">Shipping</div>
-            <div class="returns">Returns</div>
-            <div class="order-tracking">Order tracking</div>
-          </div>
-        </div>
-        <div class="text-32">
-          <div class="store">Store</div>
-          <div class="text-33">
-            <div class="address">
-              8592 Fairground St. <br />Tallahassee, FL 32303
-            </div>
-            <div class="text-34">
-              <div class="phone">+775 378-6348</div>
-              <div class="email">rgarton@outlook.com</div>
-            </div>
-          </div>
+        <p class="company-description">
+          Sed viverra eget fames sit varius. Pellentesque mattis libero viverra dictumst ornaresed justo convallis vitae
+        </p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9594335a867a6a4e42d597b3ba1b9e242a10538c58339f3d4e7613a89969501f?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" class="social-icon" alt="" /></a>
+          <a href="#" aria-label="Twitter"><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c6d6e83021803d754a2f01567106cb54668406ab4ca6c5946153a164b3d917b8?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" class="social-icon" alt="" /></a>
+          <a href="#" aria-label="Instagram"><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6c962890eb06f48b00313ac0f2333a051526fc64140f899c1cf1f034a7dca06?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" class="social-icon" alt="" /></a>
+          <a href="#" aria-label="LinkedIn"><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a09c0e98834b59b71f1a7ea6c0204dfa73f227f093b893f7d700c7331316f26d?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" class="social-icon" alt="" /></a>
         </div>
       </div>
-      <div class="text-icons-2">
-        <div>© Copyright Pet Shop 2024. Design by Figma. guru</div>
-        <img loading="lazy" src="http://b.io/ext_98-" class="img-62" alt="Payment methods" />
-      </div>
-    </footer>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        socialIcons: [
-          'http://b.io/ext_99-',
-          'http://b.io/ext_100-',
-          'http://b.io/ext_101-',
-          'http://b.io/ext_102-',
-        ],
-      };
-    },
-  };
-  </script>
-  
-  <style scoped>
+      <nav class="footer-nav">
+        <section class="nav-section">
+          <h3 class="nav-title">Company</h3>
+          <ul class="nav-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Gift cards</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </section>
+        <section class="nav-section">
+          <h3 class="nav-title">Useful Links</h3>
+          <ul class="nav-list">
+            <li><a href="#">New products</a></li>
+            <li><a href="#">Best sellers</a></li>
+            <li><a href="#">Discount</a></li>
+            <li><a href="#">F.A.Q</a></li>
+          </ul>
+        </section>
+        <section class="nav-section">
+          <h3 class="nav-title">Customer Service</h3>
+          <ul class="nav-list">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Order tracking</a></li>
+          </ul>
+        </section>
+        <section class="nav-section">
+          <h3 class="nav-title">Store</h3>
+          <address class="store-address">
+            8592 Fairground St.<br />
+            Tallahassee, FL 32303
+          </address>
+          <div class="contact-info">
+            <p class="phone">+775 378-6348</p>
+            <p class="email">rgarton@outlook.com</p>
+          </div>
+        </section>
+      </nav>
+    </div>
+    <p class="copyright">© Copyright Nexgen Arch 2024.</p>
+  </footer>
+</template>
+
+<style scoped>
+.footer {
+  display: flex;
+  padding: 100px;
+  padding-left: 200px;
+  flex-direction: column;
+  background: var(--Gray-100, #f8f9fa);
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer-image {
+  aspect-ratio: 2.32;
+  object-fit: contain;
+  width: 211px;
+  position: absolute;
+  right: -53px;
+  bottom: 0;
+  height: 219px;
+}
+
+.footer-content {
+  display: flex;
+  max-width: 1296px;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px 100px;
+}
+
+.company-info {
+  display: flex;
+  min-width: 240px;
+  flex-direction: column;
+  width: 349px;
+}
+
+.logo {
+  display: flex;
+  width: 125px;
+  align-items: center;
+  gap: 8px;
+  color: var(--Default-Black, #000);
+  font: 700 20px Poppins, sans-serif;
+}
+
+.logo-image {
+  aspect-ratio: 1.21;
+  object-fit: contain;
+  width: 29px;
+}
+
+.company-name {
+  margin: 0;
+}
+
+.company-description {
+  color: #000;
+  margin-top: 20px;
+  font: 400 16px/21px Poppins, sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.nav-section {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  font: 16px Poppins, sans-serif;
+}
+
+.nav-title {
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin-top: 16px;
+}
+
+.nav-list li:first-child {
+  margin-top: 0;
+}
+
+.nav-list a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.store-address {
+  font-style: normal;
+  line-height: 20px;
+  margin: 20px 0;
+}
+
+.contact-info {
+  line-height: 1;
+}
+
+.phone, .email {
+  margin: 4px 0;
+}
+
+.copyright {
+  color: rgba(0, 0, 0, 0.5);
+  margin: 20px 0 0;
+  font: 400 14px/2 Poppins, sans-serif;
+}
+
+@media (max-width: 991px) {
   .footer {
-    background: var(--Gray-100, #f8f9fa);
-    background-color: var(--Gray-100, #f8f9fa);
-    align-self: center;
-    position: relative;
-    display: flex;
-    width: 100%;
-    max-width: 1440px;
-    flex-direction: column;
-    overflow: hidden;
-    justify-content: start;
-    padding: 72px;
+    padding: 40px 20px;
   }
-  @media (max-width: 991px) {
-    .footer {
-      max-width: 100%;
-      padding: 0 20px;
-    }
+
+  .copyright {
+    margin-left: 10px;
   }
-  .img-60 {
-    aspect-ratio: 2.32;
-    object-fit: contain;
-    object-position: center;
-    width: 211px;
-    position: absolute;
-    z-index: 0;
-    max-width: 100%;
-    right: -53px;
-    bottom: 0px;
-    height: 219px;
-  }
-  .icons-text-2 {
-    z-index: 0;
-    display: flex;
-    width: 100%;
-    align-items: start;
-    gap: 40px 100px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .logo-text-icons {
-    align-self: stretch;
-    display: flex;
-    min-width: 240px;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    width: 349px;
-  }
-  .logo-2 {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--Default-Black, #000);
-    justify-content: start;
-    font: 700 20px Poppins, sans-serif;
-  }
-  .img-61 {
-    aspect-ratio: 1.21;
-    object-fit: contain;
-    object-position: center;
-    width: 29px;
-    align-self: stretch;
-    margin: auto 0;
-  }
-  .pet-shop {
-    align-self: stretch;
-    margin: auto 0;
-  }
-  .sed-viverra-eget-fames-sit-varius-pellentesque-mattis-libero-viverra-dictumst-ornaresed-justo-convallis-vitae {
-    color: rgba(0, 0, 0, 1);
-    align-self: stretch;
-    margin-top: 20px;
-    font: 400 16px/21px Poppins, sans-serif;
-  }
-  .social-icons {
-    display: flex;
-    margin-top: 20px;
-    align-items: center;
-    gap: 20px;
-    justify-content: start;
-  }
-  .img {
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    width: 24px;
-  }
-  .text-26 {
-    display: flex;
-    flex-direction: column;
-    color: rgba(0, 0, 0, 1);
-    justify-content: start;
-    font: 16px Poppins, sans-serif;
-  }
-  .company {
-    font-weight: 600;
-  }
-  .text-27 {
-    display: flex;
-    margin-top: 20px;
-    flex-direction: column;
-    font-weight: 400;
-    justify-content: start;
-  }
-  .blog {
-    margin-top: 16px;
-  }
-  .gift-cards {
-    margin-top: 16px;
-  }
-  .careers {
-    margin-top: 16px;
-  }
-  .text-28 {
-    display: flex;
-    flex-direction: column;
-    color: rgba(0, 0, 0, 1);
-    justify-content: start;
-    font: 16px Poppins, sans-serif;
-  }
-  .useful-links {
-    font-weight: 600;
-  }
-  .text-29 {
-    display: flex;
-    margin-top: 20px;
-    flex-direction: column;
-    font-weight: 400;
-    justify-content: start;
-  }
-  .best-sellers {
-    margin-top: 16px;
-  }
-  .discount {
-    margin-top: 16px;
-  }
-  .f-a-q {
-    margin-top: 16px;
-  }
-  .text-30 {
-    display: flex;
-    flex-direction: column;
-    color: rgba(0, 0, 0, 1);
-    justify-content: start;
-    font: 16px Poppins, sans-serif;
-  }
-  .customer-service {
-    font-weight: 600;
-  }
-  .text-31 {
-    align-self: start;
-    display: flex;
-    margin-top: 20px;
-    flex-direction: column;
-    font-weight: 400;
-    justify-content: start;
-  }
-  .shipping {
-    margin-top: 16px;
-  }
-  .returns {
-    margin-top: 16px;
-  }
-  .order-tracking {
-    margin-top: 16px;
-  }
-  .text-32 {
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    color: rgba(0, 0, 0, 1);
-    justify-content: start;
-  }
-  .store {
-    font-family: Poppins, sans-serif;
-    font-weight: 600;
-  }
-  .text-33 {
-    display: flex;
-    margin-top: 20px;
-    flex-direction: column;
-    font-weight: 500;
-    justify-content: start;
-  }
-  .address {
-    font-family: Poppins, sans-serif;
-    line-height: 20px;
-  }
-  .text-34 {
-    display: flex;
-    margin-top: 20px;
-    flex-direction: column;
-    line-height: 1;
-    justify-content: start;
-  }
-  .phone {
-    font-family: Poppins, sans-serif;
-  }
-  .email {
-    font-family: Inter, sans-serif;
-    margin-top: 4px;
-  }
-  .text-icons-2 {
-    z-index: 0;
-    display: flex;
-    margin-top: 60px;
-    width: 100%;
-    align-items: end;
-    gap: 40px 100px;
-    color: rgba(0, 0, 0, 0.5);
-    justify-content: space-between;
-    flex-wrap: wrap;
-    font: 400 14px/2 Poppins, sans-serif;
-  }
-  @media (max-width: 991px) {
-    .text-icons-2 {
-      max-width: 100%;
-      margin-top: 40px;
-    }
-  }
-  .img-62 {
-    aspect-ratio: 10.53;
-    object-fit: contain;
-    object-position: center;
-    width: 263px;
-    min-width: 240px;
-  }
-  </style>
+}
+</style>

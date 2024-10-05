@@ -13,7 +13,6 @@
       <Footer />
     </div>
   </template>
-  
   <script>
 import PetShopHeader from '../components/PetShopHeader.vue';
 import PetShopHero from '../components/PetShopHero.vue';

@@ -9,7 +9,7 @@
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fcc3b8db244a754e224f661912baca53a1bfef69b0e75d13aa4ab20de03f565e?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" alt="Email icon" class="contact-icon" />
           <span class="contact-text">rgarton@outlook.com</span>
         </div>
-        <div class="contact-item">
+        <div class="contact-item-rua">
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0459a1766085384576accced4da0e6d1e8a5e9e88191f8dad13bb1d757e0fe77?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" alt="Location icon" class="contact-icon location" />
           <span class="contact-text">8592 Fairground St. Tallahassee, FL 32303</span>
         </div>
@@ -65,12 +65,20 @@ export default {
   min-width: 240px;
   align-items: flex-start;
   gap: 24px;
+  padding-bottom: 20px;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.contact-item-rua{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 1000px;
 }
 
 .contact-icon {
