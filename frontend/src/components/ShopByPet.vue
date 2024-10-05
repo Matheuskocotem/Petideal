@@ -1,10 +1,5 @@
 <template>
   <div class="shop-by-pet">
-    <div class="header">
-      <div class="title-wrapper">
-        <div class="title">Comprar por animal de estimação</div>
-      </div>
-    </div>
     <div class="pets-container">
       <div class="pet-card">
         <div class="image-wrapper">
@@ -67,8 +62,9 @@ export default {
   flex-direction: column;
   gap: 40px; 
   height: 100%;
-  padding: 40px 72px;
-  width: 90%;
+  padding: 100px;
+  padding-left: 200px;
+  width: 100%;
 }
 
 .header {
@@ -82,6 +78,8 @@ export default {
   display: inline-flex;
   flex-direction: column;
   gap: 10px;
+  align-items: flex-start;
+  padding-left: 200px;
 }
 
 .title {
@@ -91,6 +89,7 @@ export default {
   font-weight: 600;
   line-height: 36px;
   white-space: nowrap;
+  padding-left: px;
 }
 
 .pets-container {

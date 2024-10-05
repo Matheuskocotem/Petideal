@@ -94,6 +94,8 @@
   .product-filters {
     width: 245px;
     font-family: Poppins, sans-serif;
+    padding-left: 40px; 
+    padding-right: 40px; 
   }
   
   .filter-section {

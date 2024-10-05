@@ -7,6 +7,7 @@
         <div class="shop-content">
           <ProductFilters />
           <ProductList />
+          <ProductGrid />
         </div>
         <PromoBanners />
       </main>
