@@ -76,6 +76,14 @@ const router = createRouter({
         title: 'graphic'
       }
     },
+    {
+      path: '/aboutus',
+      name: 'aboutus',
+      component: () => import('../views/PetShopAboutUs.vue'),
+      meta: {
+        title: 'aboutus'
+      }
+    },
   ]
 })
 
