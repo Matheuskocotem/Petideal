@@ -89,11 +89,12 @@
   
   <style scoped>
 #main {
+    padding-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh; /* Reduzido para se ajustar à altura da tela */
-    margin: 0; /* Remove qualquer margem que possa causar rolagem */
+    height: 90vh; 
+    margin: 0; 
     background-size: cover;
     background-position: center;
 }
@@ -102,6 +103,7 @@
   #main-container {
       width: 500px; 
       padding: 30px; 
+      padding-bottom: 20px;
       background-color: rgba(255, 255, 255, 0.95);
       border-radius: 15px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2),  0 4px 12px rgba(0, 0, 0, 0.3);

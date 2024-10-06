@@ -18,7 +18,7 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/login', [AuthController::class, 'login']);
-Route::post('/users', [AuthController::class, 'store']);
+Route::post('/register', [AuthController::class, 'store']);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/users', [AuthController::class, 'index']);

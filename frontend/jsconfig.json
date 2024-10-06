@@ -1,8 +1,17 @@
 {
   "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "src/**/*"  // Inclua todos os arquivos dentro da pasta src
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
