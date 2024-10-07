@@ -20,11 +20,11 @@
         <span class="logo-text">Pet Shop</span>
       </div>
       <ul class="nav-links">
-        <li><a href="#" class="nav-link">Home</a></li>
-        <li><a href="#" class="nav-link active">Shop</a></li>
-        <li><a href="#" class="nav-link">About Us</a></li>
-        <li><a href="#" class="nav-link">Contact Us</a></li>
-      </ul>
+  <li><router-link to="/homepage" class="nav-link">Home</router-link></li>
+  <li><router-link to="/shop" class="nav-link">Shop</router-link></li>
+  <li><router-link to="/aboutus" class="nav-link">About Us</router-link></li>
+  <li><router-link to="/contactus" class="nav-link">Contact Us</router-link></li>
+</ul>
       <div class="search-cart">
         <form class="search-form" role="search">
           <label for="search-input" class="visually-hidden">Search products</label>

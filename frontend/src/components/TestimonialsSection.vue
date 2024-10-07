@@ -7,7 +7,7 @@
       </div>
       <div class="testimonial-rating">
         <div class="stars">
-          <img src="../img/starsolo.png" alt="Star" class="star-icon" v-for="n in 5" :key="n" />
+          <img src="../Img/starsolo.png" alt="Star" class="star-icon" v-for="n in 5" :key="n" />
         </div>
       </div>
       <p class="testimonial-text">
@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="testimonial-image">
-      <img src="../img/avatarInsta.png" alt="Happy customer with pet" />
+      <img src="../Img/avatarInsta.png" alt="Happy customer with pet" />
     </div>
   </section>
 </template>

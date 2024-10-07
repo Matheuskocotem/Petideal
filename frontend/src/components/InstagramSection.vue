@@ -2,10 +2,10 @@
   <section class="instagram-section">
     <h2 class="section-title">Follow our instagram</h2>
     <div class="instagram-grid">
-      <img src="../img/followinsta1.png" alt="Instagram post 1" class="instagram-image" />
-      <img src="../img/followinsta2.png" alt="Instagram post 2" class="instagram-image" />
-      <img src="../img/followinsta3.png" alt="Instagram post 3" class="instagram-image" />
-      <img src="../img/followista4.png" alt="Instagram post 4" class="instagram-image" />
+      <img src="../Img/followinsta1.png" alt="Instagram post 1" class="instagram-image" />
+      <img src="../Img/followinsta2.png" alt="Instagram post 2" class="instagram-image" />
+      <img src="../Img/followinsta3.png" alt="Instagram post 3" class="instagram-image" />
+      <img src="../Img/followista4.png" alt="Instagram post 4" class="instagram-image" />
     </div>
   </section>
 </template>

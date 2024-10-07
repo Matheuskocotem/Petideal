@@ -1,6 +1,6 @@
 <template>
     <section class="founder-info">
-      <img src="../img/Avatar.png" alt="Taylor Joshua, Founder" class="founder-image" />
+      <img src="../Img/Avatar.png" alt="Taylor Joshua, Founder" class="founder-image" />
       <div class="founder-content">
         <h2 class="founder-name">Taylor Joshua</h2>
         <p class="founder-title">Founder</p>

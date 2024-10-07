@@ -3,17 +3,17 @@
     <h2 class="section-title">Nosso time</h2>
     <div class="team-cards">
       <div class="team-card">
-        <img src="../img/team1.png" alt="Caroline Washington" class="team-member-image" />
+        <img src="../Img/team1.png" alt="Caroline Washington" class="team-member-image" />
         <h3 class="team-member-name">Caroline Washington</h3>
         <p class="team-member-role">Seller</p>
       </div>
       <div class="team-card">
-        <img src="../img/team2.png" alt="Gerald Ferguson" class="team-member-image" />
+        <img src="../Img/team2.png" alt="Gerald Ferguson" class="team-member-image" />
         <h3 class="team-member-name">Gerald Ferguson</h3>
         <p class="team-member-role">Seller</p>
       </div>
       <div class="team-card">
-        <img src="../img/team4.png" alt="Averi Maddox" class="team-member-image" />
+        <img src="../Img/team4.png" alt="Averi Maddox" class="team-member-image" />
         <h3 class="team-member-name">Averi Maddox</h3>
         <p class="team-member-role">Seller</p>
       </div>

@@ -4,7 +4,7 @@
       <div class="pet-card">
         <div class="image-wrapper">
           <div class="overlay-group">
-            <img class="pet-image" src="../img/dog.webp" alt="Cachorro" />
+            <img class="pet-image" src="../Img/dog.webp" alt="Cachorro" />
           </div>
         </div>
         <div class="pet-name">Cachorro</div>
@@ -12,7 +12,7 @@
 
       <div class="pet-card">
         <div class="image-wrapper">
-          <img class="pet-image" src="../img/turtle.png" alt="Tartaruga" />
+          <img class="pet-image" src="../Img/turtle.png" alt="Tartaruga" />
         </div>
         <div class="pet-name">Tartaruga</div>
       </div>
@@ -20,7 +20,7 @@
       <div class="pet-card">
         <div class="image-wrapper">
           <div class="overlay-group">
-            <img class="pet-image" src="../img/cat.webp" alt="Gato" />
+            <img class="pet-image" src="../Img/cat.webp" alt="Gato" />
           </div>
         </div>
         <div class="pet-name">Gato</div>
@@ -29,7 +29,7 @@
       <div class="pet-card">
         <div class="image-wrapper">
           <div class="overlay-group">
-            <img class="pet-image" src="../img/bird.webp" alt="Pássaro" />
+            <img class="pet-image" src="../Img/bird.webp" alt="Pássaro" />
           </div>
         </div>
         <div class="pet-name">Pássaro</div>
@@ -38,7 +38,7 @@
       <div class="pet-card">
         <div class="image-wrapper">
           <div class="overlay-group">
-            <img class="pet-image" src="../img/rabit.webp" alt="Coelho" /> <!-- Corrected 'rabit' to 'rabbit' -->
+            <img class="pet-image" src="../Img/rabit.webp" alt="Coelho" /> <!-- Corrected 'rabit' to 'rabbit' -->
           </div>
         </div>
         <div class="pet-name">Coelho</div>
