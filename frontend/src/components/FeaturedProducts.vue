@@ -10,7 +10,6 @@
               <div class="product-price">${{ product.price.toFixed(2) }}</div>
             </div>
             <div class="icon-bg-6">
-              <img loading="lazy" src="http://b.io/ext_74-" class="img-22" alt="Add to cart icon" />
             </div>
           </div>
         </div>
