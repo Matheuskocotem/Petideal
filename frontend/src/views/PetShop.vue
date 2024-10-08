@@ -41,6 +41,8 @@ import PetShopHero from '../components/PetShopHero.vue';
   .pet-shop {
     width: 100%;
     background-color: #fff;
+    margin: 0;
+    overflow-x: hidden; /* Impede a rolagem horizontal */
   }
   
   .shop-content {

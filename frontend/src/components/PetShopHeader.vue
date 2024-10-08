@@ -1,50 +1,51 @@
 <template>
-  <header class="pet-shop-header">
-    <div class="contact-info">
-      <div class="contact-item">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c2f9d63fab85b206bc10ae5040360353f1243581ebadde50d05aa9b213830e0d?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" alt="Phone icon" class="contact-icon" />
-        <span class="contact-text">+379 871-8371</span>
+  <header class="pet-shop-header bg-gray-100 p-4 md:p-6">
+    <div class="contact-info flex items-center gap-4 pb-3">
+      <div class="contact-item flex items-center gap-2">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c2f9d63fab85b206bc10ae5040360353f1243581ebadde50d05aa9b213830e0d?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" alt="Phone icon" class="contact-icon w-5 h-5" />
+        <span class="contact-text text-gray-700">+379 871-8371</span>
       </div>
-      <div class="contact-item">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fcc3b8db244a754e224f661912baca53a1bfef69b0e75d13aa4ab20de03f565e?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" alt="Email icon" class="contact-icon" />
-        <span class="contact-text">rgarton@outlook.com</span>
+      <div class="contact-item flex items-center gap-2">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fcc3b8db244a754e224f661912baca53a1bfef69b0e75d13aa4ab20de03f565e?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" alt="Email icon" class="contact-icon w-5 h-5" />
+        <span class="contact-text text-gray-700">rgarton@outlook.com</span>
       </div>
-      <div class="contact-item-rua">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0459a1766085384576accced4da0e6d1e8a5e9e88191f8dad13bb1d757e0fe77?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" alt="Location icon" class="contact-icon location" />
-        <span class="contact-text">8592 Fairground St. Tallahassee, FL 32303</span>
+      <div class="contact-item flex items-center gap-2">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0459a1766085384576accced4da0e6d1e8a5e9e88191f8dad13bb1d757e0fe77?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" alt="Location icon" class="contact-icon w-5 h-5" />
+        <span class="contact-text text-gray-700">8592 Fairground St. Tallahassee, FL 32303</span>
       </div>
     </div>
-    <nav class="main-nav">
-      <div class="logo">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/869d86e3dccbba9781b65c04159b14912e0f9d757366cb45adf59914c32fa3b0?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" alt="Pet Shop logo" class="logo-image" />
-        <span class="logo-text">Pet Shop</span>
+    <nav class="main-nav flex items-center justify-between bg-white rounded-lg shadow-md p-4">
+      <div class="logo flex items-center">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/869d86e3dccbba9781b65c04159b14912e0f9d757366cb45adf59914c32fa3b0?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" alt="Pet Shop logo" class="logo-image w-6 h-8 mr-2" />
+        <span class="logo-text text-lg font-bold">Pet Shop</span>
       </div>
-      <ul class="nav-links">
-        <li><a href="#" class="nav-link">Home</a></li>
-        <li><a href="#" class="nav-link active">Shop</a></li>
-        <li><a href="#" class="nav-link">About Us</a></li>
-        <li><a href="#" class="nav-link">Contact Us</a></li>
+      <ul class="nav-links flex space-x-4">
+        <li><a href="#" class="nav-link text-gray-900 hover:text-orange-500">Home</a></li>
+        <li><a href="#" class="nav-link text-orange-500 font-semibold border-b-2 border-orange-500">Shop</a></li>
+        <li><a href="#" class="nav-link text-gray-900 hover:text-orange-500">About Us</a></li>
+        <li><a href="#" class="nav-link text-gray-900 hover:text-orange-500">Contact Us</a></li>
       </ul>
-      <div class="search-cart">
-        <form class="search-form" role="search">
-          <label for="search-input" class="visually-hidden">Search products</label>
-          <input type="search" id="search-input" placeholder="Search products..." class="search-input" />
-          <button type="submit" class="search-button">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f54504702ed8a70ca94c77306304e000bffd092436dcd387934a645a88007bc1?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" alt="Search" class="search-icon" />
+      <div class="search-cart flex items-center">
+        <form class="search-form relative mr-4" role="search">
+          <label for="search-input" class="visually-hidden sr-only">Search products</label>
+          <input type="search" id="search-input" placeholder="Search products..." class="search-input border-none bg-gray-100 rounded-full py-2 pl-4 pr-10 focus:outline-none" />
+          <button type="submit" class="search-button absolute right-2 top-1/2 transform -translate-y-1/2 bg-transparent">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f54504702ed8a70ca94c77306304e000bffd092436dcd387934a645a88007bc1?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" alt="Search" class="search-icon w-5 h-5" />
           </button>
         </form>
-        <div class="cart-icons">
-          <button class="cart-button" aria-label="View wishlist">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/31138e49db62f40a162a9dda3c4bdb382daa754240e0f0e17f2fda7a48eb8e84?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" alt="" class="cart-icon" />
+        <div class="cart-icons flex space-x-4">
+          <button class="cart-button bg-transparent p-0" aria-label="View wishlist">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/31138e49db62f40a162a9dda3c4bdb382daa754240e0f0e17f2fda7a48eb8e84?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" alt="" class="cart-icon w-5 h-5" />
           </button>
-          <button class="cart-button" aria-label="View shopping cart">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/45b4a97be78e3927557d72496281145219fc1416258a4802e859df73cb06928a?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" alt="" class="cart-icon" />
+          <button class="cart-button bg-transparent p-0" aria-label="View shopping cart">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/45b4a97be78e3927557d72496281145219fc1416258a4802e859df73cb06928a?placeholderIfAbsent=true&apiKey=d4a7c2ebb0b24556b026be03e1ca8f9c" alt="" class="cart-icon w-5 h-5" />
           </button>
         </div>
       </div>
     </nav>
   </header>
 </template>
+
 
 <script>
 export default {

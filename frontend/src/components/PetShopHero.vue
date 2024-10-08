@@ -11,7 +11,7 @@
   background-color: var(--gray-100);
   display: flex;
   flex-direction: column;
-  height: 523px;
+  height: 100%;
   padding: 0px 0px;
   position: relative;
   width: 100%;

@@ -61,7 +61,7 @@ const router = createRouter({
       }
     },
     {
-      path: '/ContactUs',
+      path: '/contactus',
       name: 'ContactUs',
       component: () => import('../views/ContactUs.vue'),
       meta: {
