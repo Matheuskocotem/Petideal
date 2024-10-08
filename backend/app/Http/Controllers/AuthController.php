@@ -2,25 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Services\AuthService;
 use Illuminate\Http\Request;
-use Illuminate\Validation\ValidationException;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
+    protected $authService;
 
-    
+    public function __construct(AuthService $authService)
+    {
+        $this->authService = $authService;
+    }
+
     public function index()
     {
-        $users = User::all();
+        $users = $this->authService->getAllUsers();
         return response()->json($users);
     }
 
     public function store(Request $request)
     {
-        $validatedData = $request->validate([    
+        $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users',
             'password' => 'required|string|min:8|confirmed',
@@ -30,22 +33,7 @@ class AuthController extends Controller
             'role' => 'required|in:cliente,admin',
         ]);
 
-        if (!User::validateCpf($validatedData['cpf'])) {
-            throw ValidationException::withMessages([
-                'cpf' => 'O CPF fornecido é inválido.',
-            ]);
-        }
-
-        $user = User::create([
-            'name' => $validatedData['name'],
-            'email' => $validatedData['email'],
-            'password' => Hash::make($validatedData['password']),
-            'cpf' => $validatedData['cpf'],
-            'address' => $validatedData['address'],
-            'phone_number' => $validatedData['phone_number'],
-            'role' => $validatedData['role'],
-        ]);
-
+        $user = $this->authService->createUser($validatedData);
         return response()->json(['message' => 'Usuário criado com sucesso.', 'user' => $user], 201);
     }
 
@@ -56,24 +44,24 @@ class AuthController extends Controller
             'password' => 'required|string',
         ]);
 
-        if (Auth::attempt($validatedData)) {
-            $user = Auth::user();
-            $token = $user->createToken('API Token')->plainTextToken;
-
-            return response()->json(['message' => 'Login bem-sucedido.', 'user' => $user, 'token' => $token]);
+        try {
+            $token = $this->authService->login($validatedData);
+            return response()->json(['message' => 'Login bem-sucedido.', 'token' => $token]);
+        } catch (\InvalidArgumentException $e) {
+            return response()->json(['message' => $e->getMessage()], 401);
         }
-
-        return response()->json(['message' => 'Credenciais inválidas.'], 401);
     }
 
     public function logout(Request $request)
     {
-        $request->user()->currentAccessToken()->delete();
+        $this->authService->logout($request->user());
         return response()->json(['message' => 'Logout bem-sucedido.']);
     }
 
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
+        $user = $this->authService->userRepository->findById($id); // Assuming user repository is accessible
+
         $validatedData = $request->validate([
             'name' => 'sometimes|required|string|max:255',
             'email' => 'sometimes|required|email|unique:users,email,' . $user->id,
@@ -84,23 +72,14 @@ class AuthController extends Controller
             'role' => 'sometimes|required|in:cliente,admin',
         ]);
 
-        if (isset($validatedData['cpf']) && !User::validateCpf($validatedData['cpf'])) {
-            throw ValidationException::withMessages([
-                'cpf' => 'O CPF fornecido é inválido.',
-            ]);
-        }
-
-        $user->update(array_merge(
-            $validatedData,
-            $request->has('password') ? ['password' => Hash::make($validatedData['password'])] : []
-        ));
-
-        return response()->json(['message' => 'Usuário atualizado com sucesso.', 'user' => $user]);
+        $updatedUser = $this->authService->updateUser($user, $validatedData);
+        return response()->json(['message' => 'Usuário atualizado com sucesso.', 'user' => $updatedUser]);
     }
 
-    public function destroy(User $user)
+    public function destroy($id)
     {
-        $user->delete();
+        $user = $this->authService->userRepository->findById($id); // Assuming user repository is accessible
+        $this->authService->deleteUser($user);
         return response()->json(['message' => 'Usuário deletado com sucesso.'], 201);
     }
 }
