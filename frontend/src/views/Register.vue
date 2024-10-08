@@ -9,15 +9,15 @@
           <p>Cadastre-se para ter acesso <br> a todos os recursos do Pet Shop</p>
         </div>
         <form id="form" @submit.prevent="registerUser">
-          <input type="text" v-model="form.name" placeholder="Nome" required>
-          <input type="text" v-model="form.surname" placeholder="Sobrenome" required>
-          <input type="email" v-model="form.email" placeholder="Email" required>
-          <input type="password" v-model="form.password" placeholder="Senha" required>
-          <input type="password" v-model="form.confirmPassword" placeholder="Confirmar Senha" required>
+          <input type="text" v-model="formData.name" placeholder="Nome" required>
+          <input type="text" v-model="formData.surname" placeholder="Sobrenome" required>
+          <input type="email" v-model="formData.email" placeholder="Email" required>
+          <input type="password" v-model="formData.password" placeholder="Senha" required>
+          <input type="password" v-model="formData.confirmPassword" placeholder="Confirmar Senha" required>
           <input type="text" v-model="formattedCpf" @input="updateCpf" placeholder="CPF" required>
-          <input type="text" v-model="form.address" placeholder="Endereço" required>
-          <input type="text" v-model="form.phoneNumber" placeholder="Número de Telefone" required>
-          <button type="submit" class="btn btn-primary">Criar Conta</button>
+          <input type="text" v-model="formData.address" placeholder="Endereço" required>
+          <input type="text" v-model="formData.phoneNumber" placeholder="Número de Telefone" required>
+          <button type="submit" class="btn btn-primary" @click="registerUser()">Criar Conta</button>
         </form>
         <div id="linkForm">
             <router-link class="link" to="/login">Já tem uma conta? Faça login.</router-link>
@@ -27,11 +27,13 @@
   </template>
   
   <script>
+import { registerUser } from '@/services/HttpService';
+
   export default {
     name: 'Register',
     data() {
       return {
-        form: {
+        formData: {
           name: '',
           surname: '',
           email: '',
@@ -55,23 +57,15 @@
       updateCpf(event) {
         const input = event.target.value;
         this.formattedCpf = this.formatCpf(input);
-        this.form.cpf = this.formattedCpf.replace(/\D/g, '');
+        this.formData.cpf = this.formattedCpf.replace(/\D/g, '');
       },
       async registerUser() {
-        if (this.form.password !== this.form.confirmPassword) {
+        if (this.formData.password !== this.formData.confirmPassword) {
           alert("As senhas não coincidem!");
           return;
         }
-  
         try {
-          const response = await fetch('/backend/register.php', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(this.form)
-          });
-          
+          const response = await registerUser(this.formData);  
           if (response.ok) {
             alert('Conta criada com sucesso!');
             this.$router.push('/login');

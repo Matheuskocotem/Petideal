@@ -10,8 +10,8 @@
           <p>Entre com suas credenciais para continuar com a compra</p>
         </div>
         <form id="form" @submit.prevent="loginUser">
-          <input type="email" v-model="form.email" placeholder="Email" required>
-          <input type="password" v-model="form.password" placeholder="Senha" required>
+          <input type="email" v-model="formData.email" placeholder="Email" required>
+          <input type="password" v-model="formData.password" placeholder="Senha" required>
           <button type="submit" class="btn btn-primary">Entrar</button>
         </form>
         <div id="linkForm">
@@ -22,11 +22,13 @@
   </template>
   
   <script>
+import { loginUser } from '@/services/HttpService';
+
   export default {
     name: 'Login',
     data() {
       return {
-        form: {
+        formData: {
           email: '',
           password: ''
         }
@@ -35,14 +37,7 @@
     methods: {
       async loginUser() {
         try {
-          const response = await fetch('/backend/login.php', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(this.form)
-          });
-          
+          const response = await loginUser(this.formData);      
           if (response.ok) {
             alert('Login bem-sucedido!');
             this.$router.push('/cart'); // Substitua com a rota do carrinho ou checkout
