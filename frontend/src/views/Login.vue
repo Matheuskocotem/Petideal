@@ -12,7 +12,7 @@
         <form id="form" @submit.prevent="loginUser">
           <input type="email" v-model="formData.email" placeholder="Email" required>
           <input type="password" v-model="formData.password" placeholder="Senha" required>
-          <button type="submit" class="btn btn-primary">Entrar</button>
+          <button type="submit" class="btn btn-primary" @click="loginUser()">Entrar</button>
         </form>
         <div id="linkForm">
             <router-link class="link" to="/register">Não tem uma conta? Crie uma.</router-link>

@@ -42,6 +42,7 @@ import { registerUser } from '@/services/HttpService';
           cpf: '',
           address: '',
           phoneNumber: '',
+          role: "cliente", 
         },
         formattedCpf: ''
       };
@@ -64,6 +65,7 @@ import { registerUser } from '@/services/HttpService';
           alert("As senhas não coincidem!");
           return;
         }
+
         try {
           const response = await registerUser(this.formData);  
           if (response.ok) {
