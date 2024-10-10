@@ -38,10 +38,10 @@ import { registerUser } from '@/services/HttpService';
           surname: '',
           email: '',
           password: '',
-          confirmPassword: '',
+          password_confirmation: '',
           cpf: '',
           address: '',
-          phoneNumber: '',
+          phone_number: '',
           role: "cliente", 
         },
         formattedCpf: ''
